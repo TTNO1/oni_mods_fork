@@ -28,7 +28,7 @@ namespace ImprovedFilteredStorage
         [HarmonyPatch(typeof(DetailsScreen), "OnPrefabInit")]
         public static class DetailsScreen_OnPrefabInit_Patch
         {
-            internal static void Postfix(List<SideScreenRef> ___sideScreens, GameObject ___sideScreenContentBody)
+            internal static void Postfix(List<SideScreenRef> ___sideScreens, GameObject ___sideScreenConfigContentBody)
             {
                 PUIUtils.AddSideScreenContent<ImprovedTreeFilterableSideScreen>();
             }
